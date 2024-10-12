@@ -1,0 +1,375 @@
+INFO:root:Creating Config from file: ./gentpool/pool/nlp_678/agent.yaml
+INFO:root:Starting to load configuration from ./gentpool/pool/nlp_678/agent.yaml
+INFO:root:Successfully loaded configuration from ./gentpool/pool/nlp_678/agent.yaml
+INFO:root:--------------------
+INFO:root:[green]Welcome to Gentopia!
+INFO:root:--------------------
+INFO:root:[green]User: 
+INFO:root:nlp_678 is thinking...
+INFO:root:Done
+INFO:root:[blue]nlp_678: 
+INFO:root:{"name":"pdf_reader", "arguments":{"url":"https://ijrpr.com/uploads/V4ISSUE6/IJRPR144687.pdf"}}
+
+INFO:root:Calling function: pdf_reader ...
+INFO:root:Done
+INFO:root:--------------------
+INFO:root:International Journal of Research Publication and Reviews, Vol 4, no 6, pp 3059-3066 June 2023  
+ 
+International Journal of Research Publication and Reviews  
+ 
+Journal homepage: www.ijrpr.com   ISSN 2582 -7421  
+ 
+ 
+Real Time Weapon Detection and Notification Using Deep Learning for 
+Security Application  
+1Mr. S. Barath,  MCA ., M.Phil., 2S Kanagathara  
+1Asst.  Prof. Department of MCA & Krishnasamy College of Engineering & Technology  
+2Department of MCA & Krishnasam y College of Engineering & Technology  
+ABSTRACT  
+Security is always a main concern in every  domain, due to a rise in crime rate in a crowded event or suspicious lonely areas. Abnormal detection and monitoring 
+have major applications of computer vision to tackle various problems. Due to the growing demand for the protection of safety , security, and personal properties, 
+the needs and  deployment of video surveillance systems can recognize and interpret the scene, and anomaly events play a vital role in intel ligence monitoring. This 
+paper implements an automatic gun detection using open cv . Gun violence has become a major cause of distr ess in the present society.  The lack of proper 
+mechanisms to detect and identify weapons in advance results in the increase of the impact caused by gun -related violence. This concept paper presents a study for 
+concealed weapon detection in real time video  using Image Processing and  openCV and Hear cascade.  The proposed system will perform the notification to the 
+respective department followed by opencv  detection model s. 
+Keywords : Weapon, Security.  
+1. INTRODUCTION  
+Weapon detection plays a vital role in safety, security, and surveillance management. In this advanced time of observation an d security the quantity of 
+Closed -Circuit Television (CCTV) conveyed out in the open and private places, for example, Cinemas, Mall s has expanded exponentially. As of now, 
+there are a huge number of CCTV cameras in operation. In this way, the expanding density of investigation camera recording makes it a c hallenge for a 
+human administrator to inspect, analyze whether a conceivably r isky circumstance is going to occur. Gun detection with model and type recognition of 
+the gun is displayed in this paper for both surveillance and control purposes, the method used is openCV. It uses the basic m achine learning classifier 
+which is modified to be used in photos and videos. The crime rate across the globe has increased mainly because of the frequent use of handheld  weapons 
+during violent activity. For a country to progress, the law -and order situation must be in control. Whether we want to att ract investors for investment or 
+to generate revenue with the tourism industry, all these needs is a peaceful and safe environment. The crime ratio because of  guns is very critical in 
+numerous parts of the world. It includes mainly those countries in which  it is legal to keep a firearm. The world is a global village now and what we speak 
+or write has an impact on the people. Even if the news they heard is crafted having no truth but as it gets viral in a few ho urs because of the media and 
+especially social media, the damage will be done. People now have more depression and have less control over their anger, and hate speeches can  get 
+those people to lose their minds  People can be brain  washed and psychological studies show that if a person has a weapon in th is situation, he may lose 
+his senses and commit a violent activity Gun detection in real -time is a very challenging task. As our desired object has a small size so, detecting it in an 
+image  is also very challenging in presence of other objects, especially those objects that can be confused with it. Deep learning m odels faced several 
+below mentioned challenges for detection and classification task:  
+• The first and main problem is the data through which CNN learn its features to be used later for classification and detection .  
+• No standard dataset was available for weapons.  
+• For real -time scenarios, making a novel dataset m anually was a very long and tim e-consuming process.  
+• Labeling the desired database is not an easy task, as all data needs to be labeled manually.  
+• Different detection algorithms were used, so a labeled dataset for one algorithm cannot be utilized for the other one .  
+2. LITERATURE SURVEY  
+Reducing the life -threatening acts and providing high security are challenging at every place. Therefore, a number of researchers have contribu ted to 
+monitoring various activities and behaviors using object detection. In general, a framework of smart sur veillance system is developed on three levels: 
+International Journal of Research Publication and Reviews, V ol 4, no 6, pp 3059-3066 June 2023                                          3060
+ 
+ firstly, to extract low -level information like features engineering and object tracking; secondly, to identify unusual human activities, behavior, or  detection 
+of any weapon; and finally, the high level is abo ut decision making like abnormal event detection or any anomaly. The latest anomaly detection techniques 
+can be divided into two groups, which are object -centered techniques and integrated methods. The convolutional neural network (CNN) spatial -temporal 
+system is only applied to spatial -temporal volumes of interest (SVOI), reducing the cost of processing. In surveillance videos of complex scenes, 
+researchers in proposed  a tool for detecting and finding anomalous activities.  
+ By conducting spatial -temporal c onvolution layer, this architecture helps one to capture objects from both time domain and frequency domain, thereby 
+extracting both the presence and motion data encoded in continuous frames. To do traditional functions to local noise and imp rove detection  precision, 
+spatial -temporal convolution layers are only implemented within spatial -temporal quantities of changing pixels. Researchers proposed anomaly -
+introduced learning method for detecting anomalous activities by developing multi -instance learning gra ph-based model with abnormal and normal 
+bimodal data, highlighting the positive instances by training coarse filter using kernel -SVM classifier and generating improved dictionary learning known 
+as anchor dictionary learning. Thus, abnormality is measure by  selecting the sparse reconstruction cost which yields the comparison with other techniques 
+including utilizing abnormal information and reducing time and cost for SRC.  
+Huetal  have contributed in detecting various objects in traffic scenes by presenting a method which detects the objects in three steps. Initially, it detects 
+the objects, recognizes the objects, and finally tracks the objects in motion by mainly targeting three classes of different objects including cars, cyclists, 
+and traffic signs. Therefo re, all the objects are detected using single learning -based detection framework consisting of dense feature extractor and trimodal 
+class detection. Additionally, dense features are extracted and shared with the rest of detectors which heads to be faster i n speed that further needs to be 
+evaluated in testing phase. Therefore, intraclass variation of objects is proposed for object sub -categorization with competitive performance on several 
+datasets.  
+Gregaetal  presented an algorithm which automatically detects knives and firearms in CCTV image and alerts the security guard or operator.  Majorly, 
+focusing on limiting false alarms and providing a real -time application where specificity of the algorithm is 94.93% an d sensitivity is 81.18% for knife 
+detection. Moreover, specificity for fire alarm system is 96.69% and sensitivity is 35.98% for different objects in the video . Mousavi et al. in carried  out 
+video classifier also referred to as the Histogram of Directed Trackle ts which identifies irregular conditions in complex scenes. In comparison to traditional 
+approaches using optical flow which only measure edge features from two subsequent frames, descriptors have been developing o ver long -range motion 
+projections cal led tracklets. Spatiotemporal cuboid footage sequences are statistically gathered on the tracklets that move through them.  
+Jietal developed a system for security footage which automatically identifies the human behavior using convolutional neural n ets (CNN s) by forming 
+deep learning model which operates directly on the raw inputs.  Therefore, 3D CNN model for classification requires the regularization of outputs with 
+high-level characteristics to increase efficiency and integrating the observations of a vari ety of various models.  
+In an image -fusion -based study,  imbalance map calculation and selection of candidate regions from input frames were performed. A low -cost, symmetrical 
+dual-camera system was installed to take advantage of this information. According to the results, the number of false positives decreased and the detection 
+of objects in surveillance videos became more convenient.  Brightness -guided pre -processing, known as darkening and contrasting at learning and test 
+stages, was proposed to improve de tection quality in surveillance videos and a cold steel weapon detection model was presented.  In a hybrid weapon 
+detection study using fuzzy logic, a system was developed to detect harmful objects such as guns and knives using additional parameters that im proved 
+correct results and reduced false alarm rates.  
+In a weapon classification study developed using a deep CNN, two new approaches were presented. In the proposed approach, the  weights of the pre -
+trained VGG -16 model were taken. Using this model, the ef fects of changing the number of neurons in the fully connected layer on classification were 
+investigated]. In a study aiming to detect firearms in surveillance videos, the focus was placed only on only areas where hum an beings were found and  a 
+weapon detec tion system was implemented using the separate components of the weapons.  
+A study on multilevel security management presented a system for the management of multimedia security in Internet of Things systems. This system 
+automatically analyzed multimedia ev ents and calculated security levels.  In another real -time object detection study, the authors detected handheld 
+weapons (pistols and rifles). In that study, a TensorFlow -based application of Overfeat, a CNN -based image classifier and feature extractor, was  used to 
+detect and classify weapons in the image.  In another study on the automatic detection of firearms and knives, algorithms were proposed to warn human 
+operators when guns or knives were detected in the closed -circuit television system. In the same s tudy, in order to apply the system in real life, the number 
+of false alarms was reduced and a system that was capable of real time warning when a dangerous situation was detected was developed.  
+Clustering algorithm and color -based segmentation were also pr eviously used to eliminate irrelevant objects from an image for the purpose of automatic 
+visual weapon detection. The Harris detector of interest points and the fast retina key point  descriptor were used to detect the relevant object (weapon) in 
+segmented images. By applying this system to the collected weapon sample images, the partial jamming, scaling, rotation and p resence of multiple 
+weapons were detected  
+3.PROPOSED SYSTEM  
+In this paper, the method used is open -cv libraries. OpenCV (Open -Source Computer Vision Library), the most used library for computer vision 
+applications. It was primarily built to increase the use of computer vision and machine perception in commercial pr oducts. This library was built to 
+accelerate the use of machine perception and take it into commercial products. The  system will include multiple stages of image processing and object 
+detection. For ease of understanding the methodology section will be div ided into three subsections , 
+International Journal of Research Publication and Reviews, V ol 4, no 6, pp 3059-3066 June 2023                                          3061
+ 
+ • Data gathering,  
+• Image Processing  
+• Object Detection  
+the high -level system architecture of the proposed system. The overall system consists of two phases the Image processing phase and th e Object detection 
+phase.  
+System Modules : 
+• RGB to Grayscale Conversion.  
+• Background Subtraction.  
+• Filtering Operation.  
+• Segmentation/Edge Detection.  
+• Sliding Window.  
+• Classification.  
+Module Description:  
+Dataset collection  
+• Collecting data heavy use of collections of images called datasets. A dataset in computer vision is a curated set of digital photographs that developers 
+use to test, train and evaluate the performance of their algorithms.  
+• Data can be gathered by different means like scraping from the web, gathering from third -party sources or you co uld even buy datasets from re -
+sellers etc.  
+• Autoencoders  work best for image data.  
+• Support file type filters.  
+• Support Bing.com filters.  
+• Download using multithreading and custom thread pool size.  
+• Support purely obtaining the image URLs.  
+OBJECT RECOGNITION  
+As the name suggests, it is the process of predicting the real class or category of an image to which it belongs by making pr obability high only for that 
+particular class.  
+• Image Classification  
+• Object Localization  
+• Object Detection  
+1) Image Classification  
+The classification model takes an image and slide the kernel/filter over the whole image to get the feature maps. From Object R ecognition to detection 
+Hierarchy. The  feature extracted, it then predicts the label based on the probability.  
+2) Object Localization  
+This method outputs the actual location of an object in an image by giving the associated height and width along with its coo rdinates.  
+3) Object Detection  
+This task uses the properties of the aforementioned algorithms. The detection algorithm tells us the bou nding box having x and y coordinates with 
+associated width and height  along Box  
+Data Pre -Processing  
+The pre -processing process involves data cleaning, standardization, processing, extraction and choice of features, etc. The final tra ining dataset is the 
+result of pre -processing processes applied to the collected dataset. Pre -processing is necessary for b etter training of a model, so  the first step is to make 
+the same size or resolution of the dataset. The next step is to apply the mean normalization. The third step is making boundi ng boxes on these images, 
+International Journal of Research Publication and Reviews, V ol 4, no 6, pp 3059-3066 June 2023                                          3062
+ 
+ which is also called annotation, localization, or  labeling. In data, labeling a bounding box is made on each image. The value x, y coordinates, and width, 
+height of the labeled object was stored in xml, csv or txt format. Following are the four main steps of data preprocessing:  
+RGB to Grayscale Conversi on 
+The order of color is BGR ( blue, green, red). The OpenCV function i mwrite() that saves an image assumes that the order of colors is BGR,  so it is saved 
+as a correct image. ... Therefore, if the and array of the image read by OpenCV imread ( ) is converte d to a PIL.  
+ RGB stands for  Red Green Blue. Most often, an RGB color is stored in a structure or unsigned integer with Blue occupying the least significa nt "area" 
+(a byte in 32 -bit and 24 -bit formats), Green the second least, and Red the third least. BGR i s the same, except the order of areas is reversed  
+RGB to Grayscale Conversion is performed in order to simplify the complexity of each frame and speed up the operation of the subsequent Background 
+subtraction and segmentation stages. Grayscale images are c omputed much faster compared to RGB images when performing segmentation operations 
+such Canny  
+Background Subtraction  
+Background subtraction is a  widely used approach to detect moving objects in a sequence of frames from static cameras.  
+ The base in this a pproach is that of detecting moving objects from the difference between the current frame and reference frame, which is often  called 
+'Background Image' or 'Background Model'.  
+Background subtraction is a  mainstream algorithm for moving object detection in v ideo surveillance systems.  
+ It segments moving objects by using the difference between the background and input images. The key to background subtraction  is to establish a reliable 
+initial background  
+Filtering Operation  
+Due to varying lighting conditions  and other interferences, the extracted foreground object is highly noisy. This affects the performance of consequent 
+operations that will take later on and demand high computational requirements by creating false regions of interest which car ry minimal in formation.  
+ Dilation and Erosion operations were performed on the extracted foreground object in order to remove small white noises that occur due to lighting 
+changes and joining disparate elements in an image.  
+Segmentation/Edge Detection  
+In order for the next stages of the algorithm to perform as desired, edges must be detected. For this purpose, the famous Canny edge detection  algorithm 
+is used.  
+The Canny algorithm takes the filtered foreground object as input and returns the edges as output.  
+Sliding Wind ow 
+As the dangerous object can be at any location in the foreground frame a sliding window technique is used. A sliding window i s a rectangular region of 
+fixed width and height that slides across an image. The sliding window technique significantly minimiz es the area to be inspected by the learning algorithm 
+selected after numerous experiments and is subject to change in the future shows a frame with multiple windows on the foregro und object.  
+Classification  
+OpenCV comes with a trainer as well as a detector. If you want to train your own classifier for any object like car, planes, etc. you can use OpenCV to 
+create one. Here  we deal with the detection of Gun. First we need to load the required XML classifiers. Then load our input image (or video) i n grayscale 
+mode. Now we find the guns in the image. If guns are found, it returns the positions of detected guns as Rect ( x, y, w ,h). Once we get these locations, we 
+can create a ROI ( Region of Interest) for the gun.  
+Mail sending  
+Python provides  smtplib module, which defines an SMTP client session object that can be used to send mail to any Internet machine with an SMT P or 
+ESMTP lis tener daemon. Here is a simple syntax to create one SMTP object, which can later be used to send an e -mail − import smtplib smtpObj = 
+smtplib.  
+Once an object detected and generates an alert message. It then sends the email along with the location to the se rver ...When the server receives an alert 
+email.  
+How to send emails using Python  
+Set up the SMTP server and log into your account.  
+Create the MIME Multipart message object and load it with appropriate headers for From,  To, and Subject fields.  
+Add your mess age body.  
+International Journal of Research Publication and Reviews, V ol 4, no 6, pp 3059-3066 June 2023                                          3063
+ 
+ Send the message using the SMTP server object.  
+Open cv  
+OpenCV is an open -source  computer vision and machine learning software library. OpenCV was built to provide a common infrastructure for computer 
+vision applications and to accelerate the use of machine perception in the commercial products.  
+OpenCV  is a library of programming functions mainly aimed at real -time computer vision. Originally developed by Intel, it was later supported by Willow 
+Garage then It seez (which was later acquired by Intel).  
+OpenCV is a  great tool for image processing and performing computer vision tasks. It is an open -source library that can be used to perform tasks like 
+face detection, objection tracking, landmark detection, and much more.  
+Some of these functions are  really common and are used in almost every computer vision task.  
+Haar cascade  
+It is a machine learning approach where a cascade function is trained from a lot of positive and negative images. Positive im ages are those images that 
+consist of faces, and neg ative images are without faces. In face detection, image features are treated as numerical information extracted from the pic tures 
+that can distinguish one image from another.  
+We apply every feature of the algorithm on all the training images. Every image is given equal weight at the starting. It founds the best threshold which 
+will categorize the faces to positive and negative. There may be errors and misclassifications. We select the features with a  minimum error rate, which 
+means these are the features t hat best classifies the face and non -face images.  
+HAAR -Cascade Detection in OpenCV  
+OpenCV provides the trainer as well as the detector. We can train the classifier for any object like cars, planes, and buildi ngs by using the OpenCV. There 
+are two primary s tates of the cascade image classifier first one is training and the other is detection.  
+OpenCV provides two applications to train cascade classifier opencv_haartraining and opencv_traincascade.  These two applications store the classifier 
+in the different f ile format.  
+For training, we need a set of samples. There are two types of samples:  
+Negative sample: It is related to non -object images.  
+Positive samples: It is a related image with detect objects.  
+4. SYSTEM ARCHITECTURE  
+Software Requirements  
+• Operating system: Windows 7.  
+• Coding Language: python  
+• Tool: pycha rm 
+Hardware Requirements  
+• System: Pentium i3 Processor  
+• Hard Disk: 300 GB (min)  
+• Monitor: 15’’ LED  
+• Input Devices: Keyboard, Mouse  
+• Ram: 2 GB  
+  
+International Journal of Research Publication and Reviews, V ol 4, no 6, pp 3059-3066 June 2023                                          3064
+ 
+ 5.ARCHITECTURE DIAGRAM  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+6.WORK FLOW DIAGRAM  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7. RESULT  
+In this section, analyze the results of the proposed system. The  screenshots are the results of the system.  
+  
+
+International Journal of Research Publication and Reviews, V ol 4, no 6, pp 3059-3066 June 2023                                          3065
+ 
+ Figure 7.1:  Image Detection  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 7.2: Video Detection  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 7.3: Mail Notification  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+International Journal of Research Publication and Reviews, V ol 4, no 6, pp 3059-3066 June 2023                                          3066
+ 
+ 8. CONCLUSION  
+Weapon detection plays a vital role in safety, security, and surveillance management. In this advanced time of observation an d security the quantity of 
+Closed -Circuit Television (CCTV) conveyed out in the open and private pl aces, have expanded exponentially and this has led to a challenge to humans 
+to spot weapon in so many cameras.   
+This paper presents a real -time framework and method that is  mainly designed for security and safety management purposes  for both monitoring and  
+control purposes, this work has presented a novel automatic weapon detection system in real-time. This work will indeed help in improving the security, 
+law and order situation for the betterment and safety of humanity, especially for the countries who had  suffered a lot with these kinds of violent activities . 
+This will bring a positive impact on the economy by attracting investors and tourists, as security and safety are their prima ry needs.  We have focused on 
+detecting the weapon in live CCTV streams and  at the same time reduced the false negatives and positives  
+REFERENCE  
+• Iqbal, Javed, et al. "Orientation Aware Object Detection with Application to Firearms."  arXiv preprint arXiv:1904.10032 (2019).  
+• Weapon Detection Using Image Processing." International Journal of Electronics, Communication and Soft Computing Science & Engineering 
+(IJECSCSE) (2018): 31 -34 
+• Elsner, Jens, et al. "Automatic Weapon Detection in Social Media Image Data using a Two -Pass Convolutional Neural Network." European 
+Law E nforcement Research Bulletin 4 SCE (2019): 61 -65. 
+• de Azevedo Kanehisa, Rodrigo Fumihiro , and Areolino de Almeida Neto. "Firearm Detection using Convolutional Neural Networks." 
+ICAART (2). 2019.  
+• Chen, Hua -Mei, et al. "Imaging for concealed weapon detection:  a tutorial overview of development in imaging sensors and processing." IEEE 
+signal processing Magazine 22.2 (2005): 52 -61. 
+• Redmon, Joseph, and Ali Farhadi. "Yolov3: An incremental improvement." arXiv preprint arXiv:1804.02767 (2018).
+INFO:root:--------------------
+INFO:root:nlp_678 is thinking...
+INFO:root:Done
+INFO:root:[blue]nlp_678: 
+INFO:root:The paper titled "Real Time Weapon Detection and Notification Using Deep Learning for Security Application" discusses the implementation of an automatic gun detection system using computer vision techniques, specifically OpenCV. The authors, Mr. S. Barath and S. Kanagathara, emphasize the growing concern for security due to rising crime rates, particularly involving gun violence.
+
+### Key Points:
+
+1. **Introduction**: 
+   - The paper highlights the importance of weapon detection in enhancing safety and security, especially in crowded places where CCTV cameras are prevalent.
+   - The authors note the challenges in detecting small objects like guns in the presence of other items and the need for effective surveillance systems.
+
+2. **Literature Survey**: 
+   - The authors review various existing methods and technologies for weapon detection, including the use of convolutional neural networks (CNNs) and other machine learning techniques.
+   - They discuss the limitations of current systems, such as high false alarm rates and the lack of standardized datasets for training detection models.
+
+3. **Proposed System**: 
+   - The proposed system utilizes OpenCV for image processing and object detection, structured into three main phases: data gathering, image processing, and object detection.
+   - Key techniques include RGB to grayscale conversion, background subtraction, filtering operations, edge detection, and classification using Haar cascades.
+
+4. **System Architecture**: 
+   - The architecture includes modules for data collection, image processing, and notification systems (e.g., sending alerts via email when a weapon is detected).
+
+5. **Results**: 
+   - The paper presents results demonstrating the effectiveness of the proposed system in detecting weapons in real-time video feeds, along with screenshots of detection outcomes.
+
+6. **Conclusion**: 
+   - The authors conclude that their real-time weapon detection system can significantly improve security management and help reduce violent incidents, thereby positively impacting societal safety and economic stability.
+
+### Keywords:
+Weapon detection, security, OpenCV, deep learning, real-time monitoring, image processing.
+
+This paper contributes to the field of security technology by proposing a practical solution for weapon detection that can be integrated into existing surveillance systems.
+INFO:root:Done
+INFO:root:[green]User: 
+INFO:root:
+[red]Bye!
